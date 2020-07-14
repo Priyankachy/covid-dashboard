@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~leaflet/dist/leaflet.css";
+.bg-theme{
+    background-color: #0e3342;
+
+}
+.bg-contrast{
+    background-color:#c1d4db;
+}
+.text-theme{
+    color: #0e3342;
+
+}
+.bg-red{
+    background-color:#690303;
+}
+.bg-green{
+    background-color:#0d9616;
+}
+.bg-orange{
+    background-color: #c4a31d;
+}

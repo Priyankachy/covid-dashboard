@@ -1,0 +1,74 @@
+<!-- overview page content -->
+<div class="container-fluid pt-2">
+  <!-- cards to show India covid cases data -->
+  <div class="row d-flex justify-content-around">
+
+    <div class="col-lg-9 card bg-light p-1">
+      <h4 class="text-center  text-theme">India</h4>
+      <div class="row d-flex justify-content-around">
+        <div class="col-lg-3 card bg-orange">
+          <h6 class="text-center text-white pt-1">Confirmed</h6>
+          <hr>
+          <p class="text-center text-light">{{confirmedCasesIndia}}</p>
+        </div>
+        <div class="col-lg-3 card bg-green">
+          <h6 class="text-center text-white pt-1">Recovered</h6>
+          <hr>
+          <p class="text-center text-light">{{recoveredCasesIndia}}</p>
+        </div>
+        <div class="col-lg-3 card bg-red">
+          <h6 class="text-center text-white pt-1">Deaths</h6>
+          <hr>
+          <p class="text-center text-light">{{deathCasesIndia}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- card to show world covid cases -->
+    <div class="col-lg-2 card bg-light p-1">
+      <h4 class="text-center text-theme">World</h4>
+      <table class="mt-2">
+        <tr>
+          <td class="text-theme font-weight-bold">Confirmed</td>
+          <td class="text-warning font-weight-bold">{{confirmedCasesWorld}}</td>
+        </tr>
+        <tr>
+          <td class="text-theme font-weight-bold"> Recovered</td>
+          <td class="text-success font-weight-bold">{{recoveredCasesWorld}}</td>
+        </tr>
+        <tr>
+          <td class="text-theme font-weight-bold">Deaths</td>
+          <td class="text-danger font-weight-bold">{{deathCasesWorld}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- table to displat state data -->
+<div class="mt-2">
+  <div class="row d-flex justify-content-around">
+
+    <div class="col-lg-8 card">
+      <app-statechart></app-statechart>
+    </div>
+    <div class="col-lg-4 card bg-light"
+      style="width:100%; max-height:500px; overflow:auto">
+      <table class="table table-striped">
+        <tr>
+          <th class="text-theme bg-light">State</th>
+          <th class="text-warning font-weight-bold">Confirmed</th>
+          <th class="text-success font-weight-bold">Recovered</th>
+          <th class="text-danger font-weight-bold">Deaths</th>
+        </tr>
+        <tr *ngFor="let item of latestData.data.regional">
+          <td class="text-info font-weight-bold">{{item.loc}}</td>
+          <td class="text-warning font-weight-bold">{{item.totalConfirmed}}</td>
+          <td class="text-success font-weight-bold">{{item.discharged}}</td>
+          <td class="text-danger font-weight-bold">{{item.deaths}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div>
+  <app-map></app-map>
+</div>
