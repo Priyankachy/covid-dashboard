@@ -1,6 +1,9 @@
 # Covid19 Dashboard
 
 A live dashorad showing covid19 patients count for every state of India.
+Currently code is ruuning on Apache server on AWS EC2.
+http://ec2-13-234-112-35.ap-south-1.compute.amazonaws.com/
+Above link will be removed soon.
 
 ## Dependencies
 1. npm
