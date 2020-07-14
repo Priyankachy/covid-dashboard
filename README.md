@@ -12,7 +12,7 @@ Covid data is taken from:
 
 # How to run
 Follwoing are the steps to run the project:
-1. git clone the repository url
+1. git clone the repository url (https://github.com/Priyankachy/covid-dashboard.git)
 2. cd to folder 
 3. npm install 
 4. ng serve -o 
